@@ -23,19 +23,35 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Set up Node
+<<<<<<< HEAD
         uses: actions/setup-node@v4  # v3からv4に更新
         with:
           node-version: 20          # Nodeも少し新しめに設
+=======
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20    
+>>>>>>> 9d94d43b54b8402890eef84395f1c84817283fc2
       - name: Install dependencies
         run: npm install
       - name: Build
         run: npm run build
       - name: Setup Pages
+<<<<<<< HEAD
         uses: actions/configure-pages@v5 # v3からv5に更新
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3 # v2からv3に更新
+=======
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+>>>>>>> 9d94d43b54b8402890eef84395f1c84817283fc2
         with:
           path: './dist'
       - name: Deploy to GitHub Pages
         id: deployment
+<<<<<<< HEAD
         uses: actions/deploy-pages@v4 # v2からv4に更新
+=======
+        uses: actions/deploy-pages@v4
+>>>>>>> 9d94d43b54b8402890eef84395f1c84817283fc2
